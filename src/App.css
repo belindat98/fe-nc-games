@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
   text-align: center;
+  background: peachpuff;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 
 .review-list {
   list-style-type: none;
-  margin: 0px;
+  margin: 0px 10px;
   padding: 0px;
   display: flex;
   flex-wrap: wrap;
@@ -23,13 +24,15 @@ body {
 }
 
 .review-card {
-  border: solid;
-  width: 300px;
+  border: solid rgb(169, 76, 76);
+  border-radius: 5%;
+  width: min(500px, 90%);
   margin: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  background-color: ivory;
 }
 
 .review-card p {
@@ -41,7 +44,7 @@ body {
 }
 
 .navbar {
-  background-color: black;
+  background-color: rgb(169, 76, 76);
   position: relative;
   z-index: 999;
   display: flex;
@@ -55,7 +58,6 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background: black;
 }
 
 .navbar li {
@@ -95,7 +97,7 @@ body {
 #login-err-msg {
   padding: 0px;
   margin: 0px;
-  color: red;
+  color: rgb(57, 21, 21);
 }
 
 .login-box, .nav-links {
@@ -128,7 +130,7 @@ body {
 footer {
   margin: 20px 0px 0px 0px;
   padding: 16px;
-  background-color: black;
+  background-color: rgb(169, 76, 76);
   color:white;
 }
 
