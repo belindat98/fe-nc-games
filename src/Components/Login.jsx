@@ -48,7 +48,7 @@ const Login = () => {
         onChange={handleInput}
         value={userInput}
       />
-      <button type="Submit">Submit</button>
+      <button type="Submit">Log In</button>
     </form>
   );
 };
