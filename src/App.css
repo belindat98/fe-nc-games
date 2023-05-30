@@ -1,8 +1,12 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
   text-align: center;
+}
+
+body {
+  margin: 0px;
 }
 
 .review-thumbnail {
@@ -115,4 +119,15 @@
 }
 .review-social-information li img {
   width: 16px;
+}
+
+footer {
+  margin: 20px 0px 0px 0px;
+  padding: 16px;
+  background-color: black;
+  color:white;
+}
+
+footer a {
+  color: palegoldenrod;
 }
