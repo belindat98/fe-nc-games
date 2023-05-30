@@ -15,13 +15,21 @@
   padding: 0px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .review-card {
   border: solid;
   width: 300px;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.review-card p {
+  margin: 16px 0px 10px 0px;
 }
 
 .navbar {
@@ -32,6 +40,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
+  flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -53,10 +62,8 @@
   text-decoration: none;
 }
 
-/* Style the dropdown menu */
 .navbar ul ul {
   position: absolute;
-  /* top: 100%; */
   display: none;
 }
 
@@ -68,7 +75,6 @@
   display: block;
 }
 
-/* Change the background color of dropdown links on hover */
 .navbar ul ul li a:hover {
   background-color: #555;
 }
@@ -84,7 +90,29 @@
   color: red;
 }
 
-.login-box {
+.login-box, .nav-links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-social-information {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.review-social-information li {
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.review-social-information li p {
+  margin-left: 5px;
+}
+.review-social-information li img {
+  width: 16px;
 }

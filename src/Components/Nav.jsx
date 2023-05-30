@@ -13,7 +13,7 @@ const Nav = ({ categories }) => {
     }
   return (
     <section className="navbar">
-      <ul>
+      <ul className="nav-links">
         <li>
           <Link to="/reviews">Home</Link>
         </li>
