@@ -36,6 +36,10 @@ body {
   margin: 16px 0px 10px 0px;
 }
 
+.review-card h3 {
+  margin: 10px;
+}
+
 .navbar {
   background-color: black;
   position: relative;
