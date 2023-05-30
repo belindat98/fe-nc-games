@@ -4,3 +4,85 @@
   padding: 2rem;
   text-align: center;
 }
+
+.review-thumbnail {
+  width: 40%;
+}
+
+.review-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.review-card {
+  border: solid;
+  width: 300px;
+  margin: 5px;
+}
+
+.navbar {
+  background-color: black;
+  position: relative;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+.navbar li {
+  display: inline-block;
+  color: white;
+}
+
+.navbar li a {
+  padding: 10px 20px;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+/* Style the dropdown menu */
+.navbar ul ul {
+  position: absolute;
+  /* top: 100%; */
+  display: none;
+}
+
+.navbar ul ul li {
+  display: block;
+}
+
+.navbar li:hover ul {
+  display: block;
+}
+
+/* Change the background color of dropdown links on hover */
+.navbar ul ul li a:hover {
+  background-color: #555;
+}
+
+.navbar-item {
+  margin: 0px;
+  padding: 10px 20px;
+}
+
+#login-err-msg {
+  padding: 0px;
+  margin: 0px;
+}
+
+.login-box {
+  display: flex;
+  align-items: center;
+}
