@@ -75,6 +75,7 @@ body {
 .navbar ul ul {
   position: absolute;
   display: none;
+  background-color: rgb(169, 76, 76);
 }
 
 .navbar ul ul li {
@@ -86,7 +87,7 @@ body {
 }
 
 .navbar ul ul li a:hover {
-  background-color: #555;
+  background-color: rgb(95, 45, 45);
 }
 
 .navbar-item {
