@@ -1,6 +1,139 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+  background: peachpuff;
+}
+
+body {
+  margin: 0px;
+}
+
+.review-thumbnail {
+  width: 40%;
+}
+
+.review-list {
+  list-style-type: none;
+  margin: 0px 10px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-card {
+  border: solid rgb(169, 76, 76);
+  border-radius: 5%;
+  width: min(500px, 90%);
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: ivory;
+}
+
+.review-card p {
+  margin: 16px 0px 10px 0px;
+}
+
+.review-card h3 {
+  margin: 10px;
+}
+
+.navbar {
+  background-color: rgb(169, 76, 76);
+  position: relative;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  flex-wrap: wrap;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  color: white;
+}
+
+.navbar li a {
+  padding: 10px 20px;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+.navbar ul ul {
+  position: absolute;
+  display: none;
+}
+
+.navbar ul ul li {
+  display: block;
+}
+
+.navbar li:hover ul {
+  display: block;
+}
+
+.navbar ul ul li a:hover {
+  background-color: #555;
+}
+
+.navbar-item {
+  margin: 0px;
+  padding: 10px 20px;
+}
+
+#login-err-msg {
+  padding: 0px;
+  margin: 0px;
+  color: rgb(57, 21, 21);
+}
+
+.login-box, .nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-social-information {
+  display: flex;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.review-social-information li {
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.review-social-information li p {
+  margin-left: 5px;
+}
+.review-social-information li img {
+  width: 16px;
+}
+
+footer {
+  margin: 20px 0px 0px 0px;
+  padding: 16px;
+  background-color: rgb(169, 76, 76);
+  color:white;
+}
+
+footer a {
+  color: palegoldenrod;
 }
