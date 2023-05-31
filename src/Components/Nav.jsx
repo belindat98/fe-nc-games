@@ -17,7 +17,7 @@ const Nav = ({ categories }) => {
         <li>
           <Link to="/reviews">Home</Link>
         </li>
-        {/* <li>
+        <li>
           <p className="navbar-item">Review By Category</p>
           <ul className="nav-category-list">
             {categories.map((category) => {
@@ -30,7 +30,7 @@ const Nav = ({ categories }) => {
               );
             })}
           </ul>
-        </li> */}
+        </li>
       </ul>
       <ul className="login-box">
         <li className="navbar-item">
