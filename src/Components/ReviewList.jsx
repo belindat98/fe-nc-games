@@ -2,8 +2,9 @@ import { useEffect, useState } from "react"
 import { getReviews } from "../utils/api"
 import ReviewCard from "./ReviewCard";
 import { useSearchParams } from "react-router-dom";
+import Filters from "./Filters";
 
-const ReviewList = () => {
+const ReviewList = ({categories}) => {
     const [reviews, setReviews] = useState([])
     const [isLoading, setIsLoading] = useState(true);
     const [searchParams, setSearchParams] = useSearchParams();
@@ -32,6 +33,7 @@ const ReviewList = () => {
     return (
     <>
         {title}
+        <Filters categories={categories}/>
         <ul className="review-list">
         {reviews.map(review => {
             return <ReviewCard key={review.title} review={review} />

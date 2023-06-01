@@ -121,14 +121,15 @@ footer a {
   align-items: center;
   justify-content: space-evenly;
   background-color: ivory;
+  padding: 10px;
 }
 
 .review-card p {
-  margin: 16px 0px 10px 0px;
+  margin: 10px 0px;
 }
 
 .review-card h3 {
-  margin: 10px;
+  margin: 10px 10px 0px 10px;
 }
 
 .review-card a {
@@ -178,7 +179,7 @@ footer a {
   justify-content: space-between;
 }
 
-.game-info, .extra-info, .comment-info {
+.game-info, .extra-info, .comment-info, .date-info {
   color:rgb(169, 76, 76);
   display: flex;
   justify-content: space-between;
@@ -291,5 +292,8 @@ footer a {
   color: red;
 }
 
+.date-info {
+  display: block;
+}
 
 

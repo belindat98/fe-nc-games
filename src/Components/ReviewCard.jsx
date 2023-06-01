@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
 const ReviewCard = ({ review }) => {
+  const postedDate = new Date(review.created_at)
   return (
     <li className="review-card">
       <Link to={`/reviews/${review.review_id}`}>
       <h3>{review.title}</h3>
+      <p className="date-info">{postedDate.toUTCString()}</p>
       <img className="review-thumbnail" src={review.review_img_url} alt={`${review.title} thumbnail`} />
       </Link>
       <ul className="review-social-information">
