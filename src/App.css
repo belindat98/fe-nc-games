@@ -99,6 +99,7 @@ footer a {
 
 .review-thumbnail {
   width: 40%;
+  border-radius: 20px;
 }
 
 .review-list {
@@ -208,7 +209,7 @@ footer a {
 }
 
 
-.comment-card {
+.comment-card, .post-comment {
   background-color: rgba(169, 76, 76, 0.066);
   margin: 15px;
   border: solid rgb(169, 76, 76);
@@ -261,3 +262,34 @@ footer a {
   height: fit-content;
   width: fit-content;
 }
+
+.post-comment {
+  padding: 0px 32px;
+}
+
+.comment-form {
+  display:flex;
+  width: inherit;
+  justify-content: space-between;
+  margin: 0px 0px 32px 0px;
+  flex-wrap: wrap;
+}
+
+.comment-input {
+  height: 8vh;
+  margin: 0px 10px 0px 0px;
+  padding: 0px 16px;
+  flex-grow: 9;
+  max-width: 75%;
+}
+
+.comment-button {
+  flex-grow: 1
+}
+
+.post-comment p {
+  color: red;
+}
+
+
+

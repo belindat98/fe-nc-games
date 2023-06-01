@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getCommentsByReviewId } from "../utils/api"
 import CommentCard from "./CommentCard"
+import PostComment from "./PostComment"
 
 const CommentList = ({review_id}) => {
     const [comments, setComments] = useState([])
@@ -16,8 +17,15 @@ const CommentList = ({review_id}) => {
         return <p>Loading...</p>
     }
 
+    let commentsContent;
     if (comments.length===0) {
-        return <><h3 className="comments-header">Comments</h3><p className= "comment-container no-comments">No Comments</p></>
+        commentsContent = <p className= "no-comments">No Comments</p>
+    } else {
+        commentsContent= <ul className="comment-list">
+        {comments.map(comment => {
+            return <CommentCard key={comment.comment_id} comment={comment} />
+        })}
+    </ul>
     }
 
     let noOfComments;
@@ -30,11 +38,8 @@ const CommentList = ({review_id}) => {
     <h3 className="comments-header">Comments</h3>
     <section className="comment-container">
         {noOfComments}
-        <ul className="comment-list">
-        {comments.map(comment => {
-            return <CommentCard key={comment.comment_id} comment={comment} />
-        })}
-    </ul>
+    <PostComment setComments={setComments}/>
+        {commentsContent}
     </section>
     </>)
 }
