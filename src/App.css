@@ -199,14 +199,11 @@ footer a {
   max-width: 100%;
 }
 
-.comment-container {
+.comment-list {
   list-style-type: none;
   padding: 0px;
 }
 
-.no-comments {
-  padding: 16px 0px;
-}
 
 .comment-card {
   background-color: rgba(169, 76, 76, 0.066);
@@ -224,4 +221,16 @@ footer a {
   color:hsl(0, 38%, 30%);
   font-size: 1.5em;
   margin: 32px 0px 16px 0px;
+}
+
+.comment-container {
+  text-align: left;
+}
+
+.comment-container p {
+  padding: 0px 0px 0px 16px;
+}
+
+.no-comments {
+  text-align: center;
 }
