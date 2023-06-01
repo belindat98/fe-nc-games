@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import ReviewInfo from "./ReviewInfo";
 import { useEffect, useState } from "react";
 import { getReviewById } from "../utils/api";
+import CommentList from "./CommentList";
 
 const IndividualReview = () => {
   const { review_id } = useParams();
@@ -30,6 +31,7 @@ const IndividualReview = () => {
   return (
     <>
       <ReviewInfo review={review} />
+      <CommentList review_id={review.review_id}/>
     </>
   );
 };

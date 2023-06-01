@@ -1,26 +1,29 @@
-const ReviewInfo = ({review}) => {
-    const postedDate = new Date(review.created_at)
+const ReviewInfo = ({ review }) => {
+  const postedDate = new Date(review.created_at);
 
-    return (
+  return (
     <>
-    <article className="individual-review">
-    <img src={review.review_img_url} alt={`${review.title} image`} className="review-photo" />
-    <section className="review-info">
-    <h3>{review.title}</h3>
-    <section className="game-info">
-    <p>{review.designer}</p>
-    <p>{review.category}</p>
-    </section>
-    <p>{review.review_body}</p>
-    <section className="additional-info">
+      <article className = "individual-review">
+        <img
+          src={review.review_img_url}
+          alt={`${review.title} image`}
+          className = "review-photo"
+        />
+        <section className = "review-info">
+          <h2>{review.title}</h2>
+          <ul className="game-info">
+            <li>{review.designer}</li>
+            <li>{review.category}</li>
+          </ul>
+          <p>{review.review_body}</p>
+          <ul className="extra-info">
+            <li>{review.owner}</li>
+            <li>{postedDate.toUTCString()}</li>
+          </ul>
+        </section>
+      </article>
+    </>
+  );
+};
 
-        <p>{review.owner}</p>
-        <p>{postedDate.toUTCString()}</p>
-
-    </section>
-    </section>
-    </article>
-    </>)
-}
-
-export default ReviewInfo
+export default ReviewInfo;
