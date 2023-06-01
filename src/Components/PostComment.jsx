@@ -42,11 +42,14 @@ const PostComment = ({setComments}) => {
     }
 
 
-    return <form className="comment-form" onSubmit={handlePostComment}>
-        <input type="text" value={commentInput} onChange={handleInput} className="comment-input"/>
-        <button type="submit">Comment</button>
-        {error ? <p>{error}</p> : ""}
+    return (<section className="post-comment">
+    <h3>Post a new comment...</h3>
+    <form className="comment-form" onSubmit={handlePostComment}>
+        <input placeholder="comment..." type="text" value={commentInput} onChange={handleInput} className="comment-input"/>
+        <button type="submit" className="comment-button">Comment</button>
     </form>
+        {error ? <p>{error}</p> : ""}
+        </section>)
 }
 
 export default PostComment
