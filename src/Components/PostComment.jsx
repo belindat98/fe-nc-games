@@ -18,6 +18,8 @@ const PostComment = ({setComments}) => {
         event.preventDefault()
         if (!currentUser) {
             setError("must be logged in")
+        } if (commentInput === "") {
+            setError("comment cannot be blank")
         } else {
         setError("")
         setComments(currentComments => {
@@ -30,7 +32,7 @@ const PostComment = ({setComments}) => {
             }, ...currentComments]
         })
         postComment(commentInput, currentUser, reviewId).catch(err => {
-            setError("there was an issue, please try again")
+            setError("there was an issue, please try again" )
             setComments(currentComments => {
                 let theComments = [...currentComments]
                 theComments.shift()
