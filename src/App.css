@@ -241,6 +241,8 @@ footer a {
 
 .vote-buttons {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .vote-buttons p {
@@ -253,4 +255,9 @@ footer a {
 
 .negative {
   color: red;
+}
+
+.vote-button {
+  height: fit-content;
+  width: fit-content;
 }

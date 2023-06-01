@@ -20,9 +20,11 @@ const VoteButtons = ({setReview, review}) => {
 
     return (<>
     <li className="vote-buttons">
-    <p className={`${review.votes > 0 ? "positive" : "negative"}`}>{review.votes}</p>
-    <button onClick={() => handleVote(1)}>Upvote</button>
-    <button onClick={() => handleVote(-1)}>Downvote</button>
+    <p className={`${review.votes >= 0 ? "positive" : "negative"}`}>{review.votes}</p>
+    <section>
+    <button onClick={() => handleVote(1)} className="vote-button">Upvote</button>
+    <button onClick={() => handleVote(-1)} className="vote-button">Downvote</button>
+    </section>
     {err ? <p>{err}</p> : null}
     </li>
     </>)
