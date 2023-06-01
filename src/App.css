@@ -43,6 +43,11 @@ body {
   margin: 10px;
 }
 
+.review-card a {
+  color: black;
+  text-decoration: none;
+}
+
 .navbar {
   background-color: rgb(169, 76, 76);
   position: relative;
@@ -137,4 +142,66 @@ footer {
 
 footer a {
   color: palegoldenrod;
+}
+
+.individual-review {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+.review-info {
+  border: solid rgb(169, 76, 76);
+  margin: 0px 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: max(400px, 50%);
+  flex-direction: column;
+  background-color: ivory;
+}
+
+.review-info h3 {
+  font-size: 1.7em;
+  margin: 20px 5px 5px 5px;
+}
+
+.review-info p {
+  margin: 0px 20px 20px 20px;
+}
+
+.review-photo {
+  width: max(250px, 40%);
+  align-self: top;
+  border: solid rgb(169, 76, 76);
+}
+
+.additional-info, .game-info {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  color: rgb(169, 76, 76);
+}
+
+.additional-info {
+  margin: 20px 0px 0px 0px;
+  width: 90%;
+
+}
+
+.additional-info p, .game-info p {
+  margin: 5px;
+}
+
+.game-info {
+  width: 50%;
+  margin: 0px 0px 20px 0px;
 }

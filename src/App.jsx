@@ -6,6 +6,7 @@ import Header from './Components/Header'
 import { useEffect, useState } from 'react'
 import { getAllCategories } from './utils/api'
 import Footer from './Components/Footer'
+import IndividualReview from './Components/IndividualReview'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ReviewList />} />
         <Route path="/reviews" element={<ReviewList />} />
+        <Route path="/reviews/:review_id" element={<IndividualReview />} />
       </Routes>
       <Footer />
     </>
