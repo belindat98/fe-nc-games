@@ -16,15 +16,8 @@ const CommentList = ({review_id}) => {
         return <p>Loading...</p>
     }
 
-    let commentText;
     if (comments.length===0) {
-        commentText = <p className= "no-comments">No Comments</p>
-    } else {
-        commentText = <ul className="comment-list">
-        {comments.map(comment => {
-            return <CommentCard key={comment.comment_id} comment={comment} />
-        })}
-    </ul>
+        return <><h3 className="comments-header">Comments</h3><p className= "comment-container no-comments">No Comments</p></>
     }
 
     let noOfComments;
@@ -37,7 +30,11 @@ const CommentList = ({review_id}) => {
     <h3 className="comments-header">Comments</h3>
     <section className="comment-container">
         {noOfComments}
-        {commentText}
+        <ul className="comment-list">
+        {comments.map(comment => {
+            return <CommentCard key={comment.comment_id} comment={comment} />
+        })}
+    </ul>
     </section>
     </>)
 }
