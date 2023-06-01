@@ -10,43 +10,12 @@ body {
   margin: 0px;
 }
 
-.review-thumbnail {
-  width: 40%;
+h1 {
+  color:hsl(0, 38%, 30%);
+  font-size: 4em;
 }
 
-.review-list {
-  list-style-type: none;
-  margin: 0px 10px;
-  padding: 0px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.review-card {
-  border: solid rgb(169, 76, 76);
-  border-radius: 5%;
-  width: min(500px, 90%);
-  margin: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: ivory;
-}
-
-.review-card p {
-  margin: 16px 0px 10px 0px;
-}
-
-.review-card h3 {
-  margin: 10px;
-}
-
-.review-card a {
-  color: black;
-  text-decoration: none;
-}
+/* navbar */
 
 .navbar {
   background-color: rgb(169, 76, 76);
@@ -113,6 +82,60 @@ body {
   justify-content: center;
 }
 
+/* footer */
+
+footer {
+  margin: 20px 0px 0px 0px;
+  padding: 16px;
+  background-color: rgb(169, 76, 76);
+  color:white;
+}
+
+footer a {
+  color: palegoldenrod;
+}
+
+/* reviews/reviews by category */
+
+.review-thumbnail {
+  width: 40%;
+}
+
+.review-list {
+  list-style-type: none;
+  margin: 0px 10px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-card {
+  border: solid rgb(169, 76, 76);
+  border-radius: 5%;
+  width: min(500px, 90%);
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: ivory;
+}
+
+.review-card p {
+  margin: 16px 0px 10px 0px;
+}
+
+.review-card h3 {
+  margin: 10px;
+}
+
+.review-card a {
+  color: black;
+  text-decoration: none;
+}
+
+
 .review-social-information {
   display: flex;
   list-style-type: none;
@@ -133,75 +156,82 @@ body {
   width: 16px;
 }
 
-footer {
-  margin: 20px 0px 0px 0px;
-  padding: 16px;
-  background-color: rgb(169, 76, 76);
-  color:white;
+/* individual review page */
+.review-info ul {
+  list-style-type: none;
 }
 
-footer a {
-  color: palegoldenrod;
+
+
+.individual-review, .comment-container {
+  width: 90vw;
+  background-color: ivory;
+  border: solid rgb(169, 76, 76);
+  margin: 16px auto;
 }
 
 .individual-review {
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  width: 80%;
-  margin: auto;
-}
-
-.review-info {
-  border: solid rgb(169, 76, 76);
-  margin: 0px 20px;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  width: max(400px, 50%);
-  flex-direction: column;
-  background-color: ivory;
-}
-
-.review-info h3 {
-  font-size: 1.7em;
-  margin: 20px 5px 5px 5px;
-}
-
-.review-info p {
-  margin: 0px 20px 20px 20px;
-}
-
-.review-photo {
-  width: max(250px, 40%);
-  align-self: top;
-  border: solid rgb(169, 76, 76);
-}
-
-.additional-info, .game-info {
-  text-align: center;
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  flex-wrap: wrap;
+}
+
+.game-info, .extra-info, .comment-info {
+  color:rgb(169, 76, 76);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
   font-size: 0.9em;
-  color: rgb(169, 76, 76);
-}
-
-.additional-info {
-  margin: 20px 0px 0px 0px;
-  width: 90%;
-
-}
-
-.additional-info p, .game-info p {
-  margin: 5px;
 }
 
 .game-info {
-  width: 50%;
-  margin: 0px 0px 20px 0px;
+  justify-content: space-evenly;
+}
+.review-info {
+  padding: 10px;
+  margin: 5px 30px;
+  flex: 2 1 50%;
+}
+
+.review-photo {
+  flex: 1 2 40%;
+  max-width: 100%;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+
+.comment-card {
+  background-color: rgba(169, 76, 76, 0.066);
+  margin: 15px;
+  border: solid rgb(169, 76, 76);
+  text-align: left;
+  padding: 10px 0px 0px 16px;
+}
+
+.comment-info {
+  margin: 0px;
+}
+
+.comments-header {
+  color:hsl(0, 38%, 30%);
+  font-size: 1.5em;
+  margin: 32px 0px 16px 0px;
+}
+
+.comment-container {
+  text-align: left;
+}
+
+.comment-container p {
+  padding: 0px 0px 0px 16px;
+}
+
+.no-comments {
+  text-align: center;
+  padding: 16px 0px;
 }
