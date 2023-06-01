@@ -30,7 +30,7 @@ const IndividualReview = () => {
 
   return (
     <>
-      <ReviewInfo review={review} />
+      <ReviewInfo review={review} setReview={setReview} />
       <CommentList review_id={review.review_id}/>
     </>
   );

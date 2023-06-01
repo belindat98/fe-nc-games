@@ -1,4 +1,6 @@
-const ReviewInfo = ({ review }) => {
+import VoteButtons from "./VoteButtons";
+
+const ReviewInfo = ({ review, setReview }) => {
   const postedDate = new Date(review.created_at);
 
   return (
@@ -17,9 +19,12 @@ const ReviewInfo = ({ review }) => {
           </ul>
           <p>{review.review_body}</p>
           <ul className="extra-info">
-            <li>{review.owner}</li>
-            <li>{postedDate.toUTCString()}</li>
-          </ul>
+          <li>
+          <p>
+            By {review.owner} on {postedDate.toUTCString()}
+          </p></li>
+        <VoteButtons setReview={setReview} review={review}/>
+        </ul>
         </section>
       </article>
     </>
