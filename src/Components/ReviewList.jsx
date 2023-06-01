@@ -24,7 +24,9 @@ const ReviewList = () => {
     if (!filterCat) {
         title = <h2>All reviews</h2>
     } else {
-        title = <h2>{filterCat[0].toUpperCase() + filterCat.slice(1)} reviews</h2>
+        let catArr = filterCat.split("-").join(" ")
+        let readableCat = catArr[0].toUpperCase() + catArr.slice(1)
+        title = <h2>{readableCat} reviews</h2>
     }
 
     return (

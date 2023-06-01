@@ -21,10 +21,12 @@ const Nav = ({ categories }) => {
           <p className="navbar-item">Review By Category</p>
           <ul className="nav-category-list">
             {categories.map((category) => {
+              let catArr = category.slug.split("-").join(" ")
+              let readableCat = catArr[0].toUpperCase() + catArr.slice(1)
               return (
                 <li key={category.slug} className="nav-category">
                   <Link to={`/reviews?category=${category.slug}`}>
-                    {category.slug}
+                    {readableCat}
                   </Link>
                 </li>
               );
