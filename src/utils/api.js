@@ -27,3 +27,11 @@ export const getCommentsByReviewId = (review_id) => {
 export const voteForReview = (vote, review_id) => {
     return gamesApi.patch(`/reviews/${review_id}`, {"inc_votes": vote}).then(({data}) => data.review)
 }
+
+export const postComment = (comment_input, username, review_id) => {
+    console.log(review_id)
+    return gamesApi.post(`/reviews/${review_id}/comments`, {
+        "body": comment_input,
+        "username": username
+})
+}
