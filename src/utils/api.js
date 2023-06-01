@@ -29,7 +29,6 @@ export const voteForReview = (vote, review_id) => {
 }
 
 export const postComment = (comment_input, username, review_id) => {
-    console.log(review_id)
     return gamesApi.post(`/reviews/${review_id}/comments`, {
         "body": comment_input,
         "username": username

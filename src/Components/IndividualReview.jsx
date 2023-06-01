@@ -24,7 +24,6 @@ const IndividualReview = () => {
     return <p>Loading...</p>
 }
   if (error) {
-    console.log(error)
     return <p>{error.response.data.msg}</p>
   }
 

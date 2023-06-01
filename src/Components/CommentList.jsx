@@ -38,8 +38,8 @@ const CommentList = ({review_id}) => {
     <h3 className="comments-header">Comments</h3>
     <section className="comment-container">
         {noOfComments}
-        {commentsContent}
     <PostComment setComments={setComments}/>
+        {commentsContent}
     </section>
     </>)
 }

@@ -21,19 +21,19 @@ const PostComment = ({setComments}) => {
         } else {
         setError("")
         setComments(currentComments => {
-            return [...currentComments, {
+            return [{
                 body: commentInput,
                 author: currentUser,
                 votes: 0,
                 created_at: Date.now(),
                 comment_id: Date.now()
-            }]
+            }, ...currentComments]
         })
         postComment(commentInput, currentUser, reviewId).catch(err => {
             setError("there was an issue, please try again")
             setComments(currentComments => {
                 let theComments = [...currentComments]
-                theComments.pop()
+                theComments.shift()
                 return theComments
             })
         })
