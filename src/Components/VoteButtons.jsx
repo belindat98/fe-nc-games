@@ -20,7 +20,7 @@ const VoteButtons = ({setReview, review}) => {
 
     return (<>
     <li className="vote-buttons">
-    <p>{review.votes}</p>
+    <p className={`${review.votes > 0 ? "positive" : "negative"}`}>{review.votes}</p>
     <button onClick={() => handleVote(1)}>Upvote</button>
     <button onClick={() => handleVote(-1)}>Downvote</button>
     {err ? <p>{err}</p> : null}

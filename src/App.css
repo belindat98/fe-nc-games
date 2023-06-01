@@ -246,3 +246,11 @@ footer a {
 .vote-buttons p {
   padding: 0px 10px;
 }
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
