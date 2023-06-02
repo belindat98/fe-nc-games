@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Login from "./Login";
 import { CurrentUserContext } from "../Contexts/CurrentUser";
 import { useContext } from "react";
+import { formatCategoryName } from "../utils/utils";
 
 const Nav = ({ categories }) => {
   const { currentUser } = useContext(CurrentUserContext);
@@ -21,12 +22,10 @@ const Nav = ({ categories }) => {
           <p className="navbar-item">Review By Category</p>
           <ul className="nav-category-list">
             {categories.map((category) => {
-              let catArr = category.slug.split("-").join(" ")
-              let readableCat = catArr[0].toUpperCase() + catArr.slice(1)
               return (
                 <li key={category.slug} className="nav-category">
                   <Link to={`/reviews?category=${category.slug}`}>
-                    {readableCat}
+                    {formatCategoryName(category.slug)}
                   </Link>
                 </li>
               );

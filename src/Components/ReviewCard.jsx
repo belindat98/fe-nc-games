@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
+import { formatCategoryName } from "../utils/utils";
 
 const ReviewCard = ({ review }) => {
+  const postedDate = new Date(review.created_at)
   return (
     <li className="review-card">
       <Link to={`/reviews/${review.review_id}`}>
       <h3>{review.title}</h3>
+      <p className="date-info">{postedDate.toUTCString()}</p>
+      <p className="date-info">{formatCategoryName(review.category)}</p>
       <img className="review-thumbnail" src={review.review_img_url} alt={`${review.title} thumbnail`} />
+      <p className="date-info">Designer: {review.designer}</p>
       </Link>
       <ul className="review-social-information">
-      <li><p>by: {review.owner}</p></li>
+      <li><p>review by {review.owner}</p></li>
         <li>
           <img src="src/Assets/001-chat.png" alt="chat bubble icon" />
           <p>{review.comment_count}</p>
