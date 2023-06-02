@@ -17,7 +17,7 @@ const handleDeleteComment = (event) => {
       });
     }).catch((err) => {
       setDeleting(false)
-      setError("there has been an issue, please try again")
+      setError("there was an issue, please try again")
     });
 };
   if (deleting) {
@@ -25,10 +25,10 @@ const handleDeleteComment = (event) => {
   }
 
   return (
-    <section>
+    <section className="delete-button">
       <button onClick={handleDeleteComment} value={comment_id}>Delete Comment
       </button>
-      {error ? <p>{error}</p> : null}
+      {error ? <p className="error-message">{error}</p> : null}
     </section>
   );
 };

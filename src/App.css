@@ -265,24 +265,28 @@ footer a {
 }
 
 .post-comment {
-  padding: 0px 32px;
+  padding: 16px 32px;
 }
 
 .comment-form {
   display:flex;
   width: inherit;
   justify-content: space-between;
-  margin: 0px 0px 32px 0px;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .comment-input {
+  flex-grow: 9;
+  width: 75%;
+}
+
+.comment-box {
   height: 8vh;
   margin: 0px 10px 0px 0px;
   padding: 0px 16px;
-  flex-grow: 9;
-  max-width: 75%;
+  width: 90%;
+  
 }
 
 .comment-button {
@@ -292,6 +296,10 @@ footer a {
 
 .post-comment p {
   color: red;
+}
+
+.post-comment h3 {
+  margin: 0px 0px 16px 0px;
 }
 
 .comment-card {
@@ -304,7 +312,7 @@ footer a {
 .comment-card button {
   width: fit-content;
   height: fit-content;
-  margin: 16px 32px;
+  margin: 16px 0 16px auto;
 }
 
 .date-info {
@@ -319,4 +327,22 @@ footer a {
 .filters button {
   margin: 0px 16px;
   min-width: 20%;
+}
+
+.error-message {
+  padding: 0px;
+  margin: 0px;
+  color: rgb(57, 21, 21);
+}
+
+.delete-button {
+  text-align: right;
+}
+
+.comment-card {
+  text-align: right;
+}
+
+.main-comment-body {
+  text-align: left;
 }
