@@ -303,6 +303,8 @@ footer a {
   width: fit-content;
   height: fit-content;
   margin: 16px 32px;
+}
+
 .date-info {
   display: block;
 }
