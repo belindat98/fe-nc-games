@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { formatCategoryName } from "../utils/utils";
+import commentIcon from '/home/belinda/northcoders/frontend/fe-nc-games/Public/001-chat.png'
+import votesIcon from '/home/belinda/northcoders/frontend/fe-nc-games/Public/002-like.png'
 
 const ReviewCard = ({ review }) => {
   const postedDate = new Date(review.created_at)
@@ -15,11 +17,11 @@ const ReviewCard = ({ review }) => {
       <ul className="review-social-information">
       <li><p>review by {review.owner}</p></li>
         <li>
-          <img src="src/Assets/001-chat.png" alt="chat bubble icon" />
+          <img src={commentIcon} alt="chat bubble icon" />
           <p>{review.comment_count}</p>
         </li>
         <li>
-          <img src="src/Assets/002-like.png" alt="thumbs up icon" />
+          <img src={votesIcon} alt="thumbs up icon" />
           <p>{review.votes}</p>
         </li>
       </ul>
