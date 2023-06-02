@@ -11,7 +11,7 @@ const CommentCard = ({comment, comments, setComments}) => {
         <p className="comment-info">{comment.author} on {postedDate.toDateString()} at {postedDate.toLocaleTimeString()}</p>
         <p>{comment.body}</p>
         </section>
-        {currentUser === comment.author ? <DeleteComment comment_id={comment.comment_id} comments={comments} setComments={setComments} /> : ""}
+        {currentUser === comment.author ? <DeleteComment comment_id={comment.comment_id} setComments={setComments} /> : ""}
         </li>
 }
 
