@@ -37,12 +37,13 @@ const Filters = ({categories, setSearchParams}) => {
         </select>
         <label htmlFor="sort_by">Sort By</label>
         <select id="sort_by" onChange={handleChangeOption} value={filterOptions.sort_by}>
-            <option value="title">Title</option>
+            <option value="category">Category</option>
+            <option value="comment_count">Comments</option>
             <option value="created_at">Date posted</option>
-            <option value="votes">Votes</option>
             <option value="designer">Designer</option>
             <option value="owner">Owner</option>
-            <option value="comment_count">Comments</option>
+            <option value="title">Title</option>
+            <option value="votes">Votes</option>
         </select>
         <label htmlFor="order">Order</label>
         <select id="order" onChange={handleChangeOption} value={filterOptions.order}>
