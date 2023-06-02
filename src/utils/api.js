@@ -32,7 +32,7 @@ export const postComment = (comment_input, username, review_id) => {
     return gamesApi.post(`/reviews/${review_id}/comments`, {
         "body": comment_input,
         "username": username
-})
+}).then(({data})=> data.comment)
 }
 
 export const deleteComment = (comment_id) => {
