@@ -58,18 +58,20 @@ const PostComment = ({ setComments }) => {
     <section className="post-comment">
       <h3>Post a new comment</h3>
       <form className="comment-form" onSubmit={handlePostComment}>
+      <section className="comment-input">
         <input
           placeholder="comment..."
           type="text"
           value={commentInput}
           onChange={handleInput}
-          className="comment-input"
-        />
+          className = "comment-box"
+          />
+      {error ? <p>{error}</p> : ""}
+        </section>
         <button type="submit" className="comment-button">
           Comment
         </button>
       </form>
-      {error ? <p>{error}</p> : ""}
     </section>
   );
 };
