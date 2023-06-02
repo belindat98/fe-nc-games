@@ -32,7 +32,6 @@ const PostComment = ({setComments}) => {
             }, ...currentComments]
         })
         postComment(commentInput, currentUser, reviewId).catch(err => {
-            console.log(err)
             setError("there was an issue, please try again" )
             setComments(currentComments => {
                 let theComments = [...currentComments]
