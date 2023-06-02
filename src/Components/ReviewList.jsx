@@ -3,6 +3,7 @@ import { getReviews } from "../utils/api"
 import ReviewCard from "./ReviewCard";
 import { useSearchParams } from "react-router-dom";
 import Filters from "./Filters";
+import { formatCategoryName } from "../utils/utils";
 
 const ReviewList = ({categories}) => {
     const [reviews, setReviews] = useState([])
@@ -27,9 +28,7 @@ const ReviewList = ({categories}) => {
     if (!filterCat) {
         title = <h2>All reviews</h2>
     } else {
-        let catArr = filterCat.split("-").join(" ")
-        let readableCat = catArr[0].toUpperCase() + catArr.slice(1)
-        title = <h2>{readableCat} reviews</h2>
+        title = <h2>{formatCategoryName(filterCat)} reviews</h2>
     }
 
     return (

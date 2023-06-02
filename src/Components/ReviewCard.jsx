@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
+import { formatCategoryName } from "../utils/utils";
 
 const ReviewCard = ({ review }) => {
   const postedDate = new Date(review.created_at)
-  let catArr = review.category.split("-").join(" ")
-  let readableCat = catArr[0].toUpperCase() + catArr.slice(1)
   return (
     <li className="review-card">
       <Link to={`/reviews/${review.review_id}`}>
       <h3>{review.title}</h3>
       <p className="date-info">{postedDate.toUTCString()}</p>
-      <p className="date-info">{readableCat}</p>
+      <p className="date-info">{formatCategoryName(review.category)}</p>
       <img className="review-thumbnail" src={review.review_img_url} alt={`${review.title} thumbnail`} />
       <p className="date-info">Designer: {review.designer}</p>
       </Link>

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { formatCategoryName } from "../utils/utils"
 
 const Filters = ({categories, setSearchParams}) => {
     const defaultFilters = {
@@ -30,9 +31,7 @@ const Filters = ({categories, setSearchParams}) => {
         <select id="category" onChange={handleChangeOption} value={filterOptions.category}>
         <option value="">All Categories</option>
             {categories.map(category => {
-                let catArr = category.slug.split("-").join(" ")
-                let readableCat = catArr[0].toUpperCase() + catArr.slice(1)
-                return <option key={category.slug} value={category.slug}>{readableCat}</option>
+                return <option key={category.slug} value={category.slug}>{formatCategoryName(category.slug)}</option>
             })}
         </select>
         <label htmlFor="sort_by">Sort By</label>
