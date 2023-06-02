@@ -9,13 +9,15 @@ const ReviewList = ({categories}) => {
     const [isLoading, setIsLoading] = useState(true);
     const [searchParams, setSearchParams] = useSearchParams();
     const filterCat = searchParams.get('category');
+    const sortBy = searchParams.get('sort_by');
+    const orderBy = searchParams.get('order');
 
     useEffect(() => {        
-        getReviews(filterCat).then(reviewsFromApi => {
+        getReviews(filterCat, sortBy, orderBy).then(reviewsFromApi => {
             setReviews(reviewsFromApi)
             setIsLoading(false)
         })
-    }, [filterCat]);
+    }, [filterCat, sortBy, orderBy]);
 
     if (isLoading) {
         return <p>Loading...</p>
@@ -33,7 +35,7 @@ const ReviewList = ({categories}) => {
     return (
     <>
         {title}
-        <Filters categories={categories}/>
+        <Filters categories={categories} setSearchParams={setSearchParams}/>
         <ul className="review-list">
         {reviews.map(review => {
             return <ReviewCard key={review.title} review={review} />
