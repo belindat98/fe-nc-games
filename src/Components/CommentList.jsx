@@ -23,7 +23,7 @@ const CommentList = ({review_id}) => {
     } else {
         commentsContent= <ul className="comment-list">
         {comments.map(comment => {
-            return <CommentCard key={comment.comment_id} comment={comment} />
+            return <CommentCard key={comment.comment_id} comment={comment} setComments={setComments/>
         })}
     </ul>
     }

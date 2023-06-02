@@ -29,9 +29,12 @@ export const voteForReview = (vote, review_id) => {
 }
 
 export const postComment = (comment_input, username, review_id) => {
-    console.log(comment_input, username, review_id)
     return gamesApi.post(`/reviews/${review_id}/comments`, {
         "body": comment_input,
         "username": username
 })
+}
+
+export const deleteComment = (comment_id) => {
+    return gamesApi.delete(`/comments/${comment_id}`)
 }
