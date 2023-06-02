@@ -23,8 +23,8 @@ function App() {
       <Nav categories={allCategories}/>
       <Header />
       <Routes>
-        <Route path="/" element={<ReviewList />} />
-        <Route path="/reviews" element={<ReviewList />} />
+        <Route path="/" element={<ReviewList categories={allCategories}/>} />
+        <Route path="/reviews" element={<ReviewList categories={allCategories}/>} />
         <Route path="/reviews/:review_id" element={<IndividualReview />} />
       </Routes>
       <Footer />
